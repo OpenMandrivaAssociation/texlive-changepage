@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/changepage
+# catalog-date 2009-11-09 14:16:05 +0100
+# catalog-license lppl1.3
+# catalog-version 1.0c
 Name:		texlive-changepage
 Version:	1.0c
 Release:	1
@@ -49,6 +55,7 @@ distributed with the package.
 #- source
 %doc %{_texmfdistdir}/source/latex/changepage/changepage.ins
 %doc %{_texmfdistdir}/source/latex/changepage/changepage.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +66,5 @@ distributed with the package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
