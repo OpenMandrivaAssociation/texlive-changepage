@@ -6,7 +6,7 @@
 # catalog-version 1.0c
 Name:		texlive-changepage
 Version:	1.0c
-Release:	6
+Release:	7
 Summary:	Margin adjustment and detection of odd/even pages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/changepage
