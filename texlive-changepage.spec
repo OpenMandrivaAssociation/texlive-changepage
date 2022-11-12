@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/changepage
-# catalog-date 2009-11-09 14:16:05 +0100
-# catalog-license lppl1.3
-# catalog-version 1.0c
 Name:		texlive-changepage
-Version:	1.0c
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Margin adjustment and detection of odd/even pages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/changepage
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/changepage.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/changepage.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/changepage.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/changepage.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/changepage.doc.r15878.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/changepage.source.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ package will eventually replace the chngpage package, which is
 distributed with the package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,25 +42,11 @@ distributed with the package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0c-2
-+ Revision: 750099
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0c-1
-+ Revision: 718031
-- texlive-changepage
-- texlive-changepage
-- texlive-changepage
-- texlive-changepage
-- texlive-changepage
-
