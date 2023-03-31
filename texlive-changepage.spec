@@ -1,6 +1,6 @@
 Name:		texlive-changepage
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Margin adjustment and detection of odd/even pages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/changepage
