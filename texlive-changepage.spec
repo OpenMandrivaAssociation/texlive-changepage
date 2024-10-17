@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Margin adjustment and detection of odd/even pages
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/changepage
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/changepage
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/changepage.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/changepage.doc.r%{version}.tar.xz
